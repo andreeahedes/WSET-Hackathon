@@ -1,12 +1,5 @@
 header {
-    text-align: center;
-    border: 2px solid sandybrown;
-    color: black;
-    background-color: #FFDAB9;
-    height: 50px;
-    width: 300px;
-    position: relative;
-    left: 550px;
+    <h1 style="text-align:center; color=forestgreen;" Living Sustainably </h1>
 }
 
 body {
