@@ -1,13 +1,15 @@
 h1 { 
-    color = forestgreen;
+    color = green;
+    text-align = center;
     font-size = 16px;
     font-weight = bold;
-    margin-bottom = 1px;    
+    margin-bottom = 0px;    
 }
 
 h2 {
-    color = forestgreen;
-    font-size = 14px;   
+    color = green;
+    text-align = center;
+    font-size = 10px;   
 }
 
 
