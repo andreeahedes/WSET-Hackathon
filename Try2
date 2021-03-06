@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+
+
+   <img width="895" alt="Bathroom Image" src="https://user-images.githubusercontent.com/80077169/110214569-17d91500-7e9d-11eb-8337-608dd9924d88.png" />
+<input type="button" class="button1" value="Bathtub" onclick="alert('Turn off the tab')" style="position:absolute; top:50px; right: 5%;"/>
+
+
+   
+</html>
+
