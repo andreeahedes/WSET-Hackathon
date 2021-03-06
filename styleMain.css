@@ -4,7 +4,7 @@ header {
     color: black;
     background-color: #FFDAB9;
     height: 50px;
-    width: 100px;
+    width: 300px;
     position: relative;
     left: 550px;
 }
@@ -62,7 +62,7 @@ div.bees {
     width: 100px;
     position: relative;
     left: 910px;
-    top: 400px;
+    top: 300px;
     border: 2px solid sandybrown;
     background: wheat;
 }
