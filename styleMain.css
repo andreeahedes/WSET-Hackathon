@@ -4,6 +4,7 @@ body {
     background-position: center;
     height: 700px;
     background-size: cover;
+  
 }
 
 div.house {
@@ -32,7 +33,7 @@ div.recycling {
     width: 100px;
     position: relative;
     left: 550px;
-    top: 350px;
+    top: 310px;
     border: 2px solid sandybrown;
     background-color: wheat
 }
@@ -51,7 +52,7 @@ div.bees {
     width: 100px;
     position: relative;
     left: 950px;
-    top: 400px;
+    top: 350px;
     border: 2px solid sandybrown;
     background: wheat;
 }
