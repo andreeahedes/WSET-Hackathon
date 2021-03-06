@@ -29,6 +29,7 @@ YEAR = CONSTANTS.year
 DAY = CONSTANTS.day
 R0=np.array([3*PI/4,1000.0 * R_EARTH,- 1000.0, 13.0])
 
+return 0
 
 t_eval = np.linspace(0.0, 100.0 * DAY, 1000000)
 
