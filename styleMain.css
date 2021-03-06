@@ -1,11 +1,24 @@
+h1 { 
+    color = forestgreen;
+    font-size = 16px;
+    font-weight = bold;
+    margin-bottom = 1px;    
+}
+
+h2 {
+    color = forestgreen;
+    font-size = 14px;   
+}
+
+
 body {
     background-image: url('image.jpg');
     background-repeat: no-repeat;
     background-position: center;
     height: 700px;
-    background-size: cover;
-  
+    background-size: cover; 
 }
+
 
 div.house {
     text-align: center;
