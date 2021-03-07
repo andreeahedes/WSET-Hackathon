@@ -121,7 +121,7 @@ div.garden {
     width: 100px;
     position: relative;
     left: 550px;
-    top: 5px;
+    top: 0px;
     border: 2px solid sandybrown;
     background: wheat;
 }
