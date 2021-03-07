@@ -6,6 +6,11 @@ body {
     background-size: cover; 
 }
 
+div.header {
+    text-align: center;
+    color: forestgreen;
+    font-weight: bold;
+}
 
 div.house {
     text-align: center;
