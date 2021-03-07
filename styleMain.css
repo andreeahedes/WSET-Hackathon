@@ -38,7 +38,7 @@ div.recycling {
     width: 100px;
     position: relative;
     left: 550px;
-    top: 330px;
+    top: 300px;
     border: 2px solid sandybrown;
     background-color: wheat
 }
@@ -57,7 +57,7 @@ div.bees {
     width: 100px;
     position: relative;
     left: 1000px;
-    top: 350px;
+    top: 300px;
     border: 2px solid sandybrown;
     background: wheat;
 }
