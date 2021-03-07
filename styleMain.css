@@ -1,5 +1,4 @@
-
-div.header { 
+.header { 
     color = green;
     text-align = center;
     font-size = 16px;
@@ -7,7 +6,7 @@ div.header {
     margin-bottom = 0px;    
 }
 
-div.subheader {
+.subheader {
     color = green;
     text-align = center;
     font-size = 10px;   
