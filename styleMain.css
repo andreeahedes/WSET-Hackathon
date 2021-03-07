@@ -81,7 +81,7 @@ div.frogs {
     width: 100px;
     position: relative;
     left: 950px;
-    top: 250px;
+    top: 230px;
     border: 2px solid sandybrown;
     background: wheat;
 }
@@ -101,12 +101,32 @@ div.greenhouse {
     width: 100px;
     position: relative;
     left: 980px;
-    top: 100px;
+    top: 30px;
     border: 2px solid sandybrown;
     background: wheat;
 }
 
 div.greenhouse:hover {
+    background-color: #FFDAB9;
+    color: seagreen;
+    cursor: pointer;
+    transform: scale(1.5) perspective(1px)
+}
+
+div.garden {
+    text-align: center;
+    font-family: helvetica;
+    padding-top: 10px;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    left: 550px;
+    top: 70px;
+    border: 2px solid sandybrown;
+    background: wheat;
+}
+
+div.garden:hover {
     background-color: #FFDAB9;
     color: seagreen;
     cursor: pointer;
