@@ -8,12 +8,14 @@ body {
 
 div.header {
     text-align: center;
+    font-family: helvetica;
     color: black;
     font-weight: bold;
 }
 
 div.house {
     text-align: center;
+    font-family: helvetica;
     padding-top: 10px;
     height: 50px;
     width: 100px;
@@ -33,6 +35,7 @@ div.house:hover {
 
 div.recycling {
     text-align: center;
+    font-family: helvetica;
     padding-top: 10px;
     height: 30px;
     width: 100px;
@@ -52,12 +55,13 @@ div.recycling:hover {
 
 div.bees {
     text-align: center;
+    font-family: helvetica;
     padding-top: 10px;
     height: 30px;
     width: 100px;
     position: relative;
     left: 980px;
-    top: 300px;
+    top: 330px;
     border: 2px solid sandybrown;
     background: wheat;
 }
