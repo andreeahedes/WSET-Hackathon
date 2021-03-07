@@ -21,6 +21,7 @@ div.garden {
     width: 100px;
     position: relative;
     left: 650px;
+    top: 10px;
     border: 2px solid sandybrown;
     background: wheat;
 }
@@ -132,22 +133,4 @@ div.greenhouse:hover {
     transform: scale(1.5) perspective(1px)
 }
 
-div.garden {
-    text-align: center;
-    font-family: helvetica;
-    padding-top: 10px;
-    height: 30px;
-    width: 100px;
-    position: relative;
-    left: 550px;
-    top: 15px;
-    border: 2px solid sandybrown;
-    background: wheat;
-}
 
-div.garden:hover {
-    background-color: #FFDAB9;
-    color: seagreen;
-    cursor: pointer;
-    transform: scale(1.5) perspective(1px)
-}
