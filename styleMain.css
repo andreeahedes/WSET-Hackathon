@@ -13,6 +13,26 @@ div.header {
     font-weight: bold;
 }
 
+div.garden {
+    text-align: center;
+    font-family: helvetica;
+    padding-top: 10px;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    left: 550px;
+    top: 15px;
+    border: 2px solid sandybrown;
+    background: wheat;
+}
+
+div.garden:hover {
+    background-color: #FFDAB9;
+    color: seagreen;
+    cursor: pointer;
+    transform: scale(1.5) perspective(1px)
+}
+
 div.house {
     text-align: center;
     font-family: helvetica;
@@ -99,7 +119,7 @@ div.greenhouse {
     padding-top: 10px;
     height: 30px;
     width: 100px;
-    position: fixed;
+    position: relative;
     left: 980px;
     top: 10px;
     border: 2px solid sandybrown;
@@ -119,7 +139,7 @@ div.garden {
     padding-top: 10px;
     height: 30px;
     width: 100px;
-    position: fixed;
+    position: relative;
     left: 550px;
     top: 15px;
     border: 2px solid sandybrown;
