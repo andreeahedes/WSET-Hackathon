@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        canvas {
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body onload="startGame()">
+    <script>
+        var myGamePiece;
+        var bluebin;
+        var redbin;
+        var greenbin;
+        var myScore;
+        var score = 0;
+        let img = new Image();
+        img.onload = function() {
+            context.drawImage(img, 10, 10);
+        };
+
+
+        function startGame() {
+            myGamePiece = new component(80, 80, "https://lh3.googleusercontent.com/proxy/irHP3FEodFMLXKrKOx5C5lHbM_Lh8VLPK657sdWAgPT_nrhsRd9BQvMqzMBp9wlLExBaMTuFn0S-nnURWIbz8TIfOEo2mgOA9NshqdGUkK062M3sEGfcdP-TeKtxVZNY3ZqrfCpXcgbBn7PAdSYjIj0u9mJLKhAY7yhlkBPd9sOSpwLCTgSfZNw", 200, 1, "image");
+            myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+            bluebin = new component(80, 100, "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-icon2-ake0470-jj.jpg?w=600&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fe680687802183ae36e97d56eef97c07", 300, 175, "image");
+            redbin = new component(80, 100, "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-icon2-ake0469-jj.jpg?w=600&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=d5bf784c5571aea96e43629bf6d76906", 100, 175, "image");
+            greenbin = new component(80, 100, "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-icon2-ake0474-jj.jpg?w=600&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=13602afc6663c50c3e974e4b6c63e748", 200, 175, "image");
+            myGameArea.start();
+        }
+
+        var myGameArea = {
+            canvas: document.createElement("canvas"),
+            start: function() {
+                this.canvas.width = 480;
+                this.canvas.height = 270;
+                this.context = this.canvas.getContext("2d");
+                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                this.interval = setInterval(updateGameArea, 20);
+                window.addEventListener('keydown', function(e) {
+                    myGameArea.key = e.keyCode;
+                })
+                window.addEventListener('keyup', function(e) {
+                    myGameArea.key = false;
+                })
+            },
+            clear: function() {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        }
+
+        function component(width, height, color, x, y, type) {
+            this.type = type;
+            if (type == "image") {
+                this.image = new Image();
+                this.image.src = color;
+            }
+            this.width = width;
+            this.height = height;
+            this.speedX = 0;
+            this.speedY = 0;
+            this.x = x;
+            this.y = y;
+            this.update = function() {
+                ctx = myGameArea.context;
+
+                if (this.type == "image") {
+                    ctx.drawImage(this.image,
+                        this.x,
+                        this.y,
+                        this.width, this.height);
+
+                } else if (this.type == "text") {
+                    ctx.font = this.width + " " + this.height;
+                    ctx.fillStyle = color;
+                    ctx.fillText(this.text, this.x, this.y);
+                } else {
+                    ctx.fillStyle = color;
+                    ctx.fillRect(this.x, this.y, this.width, this.height);
+                }
+
+            }
+            this.newPos = function() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+            }
+        }
+
+        function resetGamePiecePos() {
+            myGamePiece.x = 200;
+            myGamePiece.y = 1;
+            myGameArea.key = false;
+        }
+
+        function detectCollision() {
+            bottleLeftBottomX = myGamePiece.x;
+            bottleLeftBottomY = myGamePiece.y + 80;
+            if (bottleLeftBottomY >= 200) {
+                if (bottleLeftBottomX > 60 && bottleLeftBottomX < 140) {
+                    alert("Correct! Red recycling bins are used for plastics");
+                    score += 1
+                    resetGamePiecePos()
+                }
+                if (bottleLeftBottomX > 160 && bottleLeftBottomX < 240) {
+                    alert("Try again.Green recycling bins are used for dry mixed recycling, e.g. glass and cans");
+                    myGamePiece.x = 200;
+                    myGamePiece.y = 1;
+                    resetGamePiecePos()
+                }
+                if (bottleLeftBottomX > 260 && bottleLeftBottomX < 340) {
+                    alert("Try again.Blue recycling bins are used for paper and cardboard.");
+                    resetGamePiecePos()
+                }
+            }
+        }
+
+        function updateGameArea() {
+            myGameArea.clear();
+            myGamePiece.speedX = 0;
+            myGamePiece.speedY = 0;
+            if (myGameArea.key && myGameArea.key == 37) {
+                myGamePiece.speedX = -1;
+            }
+            if (myGameArea.key && myGameArea.key == 39) {
+                myGamePiece.speedX = 1;
+            }
+            if (myGameArea.key && myGameArea.key == 38) {
+                myGamePiece.speedY = -1;
+            }
+            if (myGameArea.key && myGameArea.key == 40) {
+                myGamePiece.speedY = 1;
+            }
+
+
+            myGamePiece.newPos();
+            myGamePiece.update();
+            bluebin.update();
+            redbin.update();
+            greenbin.update();
+            detectCollision();
+            myScore.text = "SCORE: " + score;
+            myScore.update();
+
+        }
+    </script>
+</body>
+
+</html>
