@@ -72,3 +72,23 @@ div.bees:hover {
     cursor: pointer;
     transform: scale(1.5) perspective(1px)
 }
+
+div.frogs {
+    text-align: center;
+    font-family: helvetica;
+    padding-top: 10px;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    left: 950px;
+    top: 250px;
+    border: 2px solid sandybrown;
+    background: wheat;
+}
+
+div.frogs:hover {
+    background-color: #FFDAB9;
+    color: seagreen;
+    cursor: pointer;
+    transform: scale(1.5) perspective(1px)
+}
