@@ -8,7 +8,7 @@ body {
 
 div.header {
     text-align: center;
-    color: forestgreen;
+    color: black;
     font-weight: bold;
 }
 
@@ -19,7 +19,7 @@ div.house {
     width: 100px;
     position: relative;
     left: 350px;
-    top: 250px;
+    top: 200px;
     border: 2px solid sandybrown;
     background-color: wheat
 }
@@ -38,7 +38,7 @@ div.recycling {
     width: 100px;
     position: relative;
     left: 550px;
-    top: 310px;
+    top: 330px;
     border: 2px solid sandybrown;
     background-color: wheat
 }
@@ -56,8 +56,8 @@ div.bees {
     height: 30px;
     width: 100px;
     position: relative;
-    left: 950px;
-    top: 380px;
+    left: 1000px;
+    top: 350px;
     border: 2px solid sandybrown;
     background: wheat;
 }
