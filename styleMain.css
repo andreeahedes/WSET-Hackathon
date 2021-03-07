@@ -21,7 +21,7 @@ div.garden {
     width: 100px;
     position: relative;
     left: 550px;
-    top: 15px;
+    top: 0px;
     border: 2px solid sandybrown;
     background: wheat;
 }
@@ -101,7 +101,7 @@ div.frogs {
     width: 100px;
     position: relative;
     left: 950px;
-    top: 190px;
+    top: 170px;
     border: 2px solid sandybrown;
     background: wheat;
 }
@@ -121,7 +121,7 @@ div.greenhouse {
     width: 100px;
     position: relative;
     left: 980px;
-    top: 10px;
+    top: 0px;
     border: 2px solid sandybrown;
     background: wheat;
 }
